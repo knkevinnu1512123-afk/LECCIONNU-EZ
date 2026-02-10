@@ -1,146 +1,66 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    background: radial-gradient(circle, #111, #000);
-    font-family: Arial, Helvetica, sans-serif;
+    background: #111;
     color: white;
-    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    text-align: center;
 }
 
-/* MARCO LED */
-.marco-led {
-    position: fixed;
-    inset: 10px;
-    border-radius: 20px;
-    border: 6px solid red;
-    animation: led 3s linear infinite;
-    pointer-events: none;
+/* MARCO LED SIMPLE */
+.marco {
+    margin: 20px;
+    padding: 20px;
+    border: 5px solid red;
+    animation: led 2s infinite;
 }
 
 @keyframes led {
-    0% { border-color: red; box-shadow: 0 0 20px red; }
-    25% { border-color: cyan; box-shadow: 0 0 20px cyan; }
-    50% { border-color: lime; box-shadow: 0 0 20px lime; }
-    75% { border-color: yellow; box-shadow: 0 0 20px yellow; }
-    100% { border-color: red; box-shadow: 0 0 20px red; }
+    0% { border-color: red; }
+    50% { border-color: yellow; }
+    100% { border-color: red; }
 }
 
-/* CONTENEDOR */
-.contenedor {
-    text-align: center;
-    padding: 40px;
-}
+/* TEXTO */
+h1 { color: gold; }
+h2 { margin-bottom: 20px; }
 
-/* ESCENA */
-.escena {
+/* PISTA */
+.pista {
     position: relative;
-    height: 220px;
-    margin-bottom: 20px;
+    height: 80px;
+    border-top: 3px dashed white;
+    border-bottom: 3px dashed white;
+    margin: 20px 0;
 }
 
-/* COPA */
-.copa {
-    font-size: 120px;
-    animation: girar 4s linear infinite;
-}
-
-@keyframes girar {
-    from { transform: rotateY(0deg); }
-    to { transform: rotateY(360deg); }
-}
-
-/* AUTO */
+/* AUTOS */
 .auto {
+    width: 60px;
+    height: 30px;
     position: absolute;
-    bottom: 10px;
-    left: -200px;
-    width: 160px;
-    height: 50px;
-    animation: mover 6s linear infinite;
+    top: 20px;
+    animation: mover 4s linear infinite;
+}
+
+.rojo { background: red; }
+.azul {
+    background: blue;
+    top: 40px;
+    animation-duration: 5s;
 }
 
 @keyframes mover {
-    from { left: -200px; }
-    to { left: 100%; }
-}
-
-.cuerpo {
-    width: 160px;
-    height: 35px;
-    background: linear-gradient(45deg, red, darkred);
-    border-radius: 10px;
-}
-
-.rueda {
-    width: 26px;
-    height: 26px;
-    background: black;
-    border-radius: 50%;
-    position: absolute;
-    bottom: -13px;
-    animation: rueda 0.5s linear infinite;
-}
-
-@keyframes rueda {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-.r1 { left: 20px; }
-.r2 { right: 20px; }
-
-/* TEXTO */
-h1 {
-    font-size: 48px;
-    text-shadow: 0 0 15px gold;
-    animation: pulso 2s infinite alternate;
-}
-
-h2 {
-    font-size: 36px;
-    color: gold;
-    margin-bottom: 20px;
-}
-
-@keyframes pulso {
-    from { transform: scale(1); }
-    to { transform: scale(1.1); }
+    from { left: 0; }
+    to { left: 90%; }
 }
 
 /* BOTÓN */
 button {
-    padding: 12px 25px;
-    font-size: 18px;
-    background: gold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-bottom: 30px;
-}
-
-button:hover {
-    background: orange;
+    padding: 10px 20px;
+    margin: 20px;
 }
 
 /* IMÁGENES */
-.imagenes {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
 .imagenes img {
-    width: 250px;
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(255,255,255,0.4);
-    transition: transform 0.3s;
-}
-
-.imagenes img:hover {
-    transform: scale(1.1);
+    width: 200px;
+    margin: 10px;
 }
