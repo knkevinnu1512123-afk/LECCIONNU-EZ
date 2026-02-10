@@ -1,176 +1,42 @@
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* BODY */
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #000, #1a1a1a);
+    background-color: #803636;
     color: white;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-/* COPAS EN ESQUINAS */
-.copa {
-    position: fixed;
-    font-size: 70px;
-    animation: girar 3s linear infinite;
-    text-shadow: 0 0 20px gold;
-    z-index: 10;
-}
-
-.sup-izq { top: 20px; left: 20px; }
-.sup-der { top: 20px; right: 20px; }
-.inf-izq { bottom: 20px; left: 20px; }
-.inf-der { bottom: 20px; right: 20px; }
-
-/* CONTENEDOR */
-.contenedor {
-    background: rgba(15, 15, 15, 0.95);
-    margin: 40px;
-    padding: 40px;
-    max-width: 1000px;
-    border-radius: 25px;
-    border: 3px solid red;
+    font-family: Arial, sans-serif;
     text-align: center;
-    box-shadow: 0 0 35px rgba(255, 0, 0, 0.5);
 }
 
-/* TITULOS */
+.contenedor {
+    margin: 40px;
+    padding: 30px;
+    border: 3px solid red;
+    border-radius: 15px;
+}
+
 h1 {
-    font-size: 48px;
     color: red;
-    letter-spacing: 4px;
-    margin-bottom: 10px;
-    text-shadow: 0 0 20px red;
 }
 
-h2 {
-    color: #ccc;
-    margin-bottom: 25px;
-}
-
-/* TEXTO */
 p {
-    font-size: 18px;
     margin: 20px;
-    padding: 15px;
-    background: #111;
-    border-left: 5px solid red;
-    border-radius: 10px;
-}
-
-/* BOTÓN */
-a {
-    text-decoration: none;
 }
 
 button {
-    background: linear-gradient(90deg, red, darkred);
+    padding: 10px 25px;
+    background-color: red;
     color: white;
     border: none;
-    margin: 25px;
-    padding: 15px 40px;
-    border-radius: 30px;
-    font-size: 16px;
     cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
-}
-
-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 35px red;
-}
-
-/* CAMPEÓN */
-.campeon {
-    margin: 30px 0;
-    padding: 20px;
-    border: 2px dashed gold;
-    border-radius: 20px;
-    background: radial-gradient(circle, #111, #000);
-}
-
-.campeon h3 {
-    font-size: 32px;
-    color: gold;
-    letter-spacing: 3px;
-    animation: parpadeo 1.5s infinite;
-}
-
-/* FUEGOS */
-.fuegos {
-    position: relative;
-    height: 70px;
-    margin-top: 20px;
-}
-
-.fuegos span {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    animation: explotar 1.5s infinite;
-}
-
-.fuegos span:nth-child(1) { left: 10%; background: red; }
-.fuegos span:nth-child(2) { left: 30%; background: yellow; animation-delay: .3s; }
-.fuegos span:nth-child(3) { left: 50%; background: cyan; animation-delay: .6s; }
-.fuegos span:nth-child(4) { left: 70%; background: lime; animation-delay: .9s; }
-.fuegos span:nth-child(5) { left: 90%; background: orange; animation-delay: 1.2s; }
-.fuegos span:nth-child(6) { left: 50%; background: magenta; animation-delay: 1.5s; }
-
-/* IMÁGENES */
-.imagenes {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
 }
 
 .imagenes img {
-    width: 240px;
+    width: 200px;
     margin: 10px;
-    padding: 5px;
-    border-radius: 15px;
-    border: 2px solid red;
-    background: black;
-    transition: 0.3s;
 }
 
-.imagenes img:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 0 25px red;
+.copa {
+    position: fixed;
+    font-size: 50px;
 }
 
-/* ANIMACIONES */
-@keyframes girar {
-    from { transform: rotateY(0deg) rotateX(0deg); }
-    to { transform: rotateY(360deg) rotateX(360deg); }
-}
-
-@keyframes parpadeo {
-    0% { opacity: 1; }
-    50% { opacity: 0.4; }
-    100% { opacity: 1; }
-}
-
-@keyframes explotar {
-    0% {
-        transform: translateY(40px) scale(0);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-40px) scale(1.5);
-        opacity: 0;
-    }
-}
+.sup-izq { top: 10px; left: 10px; }
+.sup-der { top: 10px; right: 10px; }
